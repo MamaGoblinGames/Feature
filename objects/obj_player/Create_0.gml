@@ -1,0 +1,12 @@
+spd = 1;
+grav = 0.1;
+gravdir = "down";
+jump = 3;
+slam = 5;
+slamming = false;
+blockbelow = false;
+blockabove = false;
+blockright = false;
+blockleft = false;
+inblock = false;
+dir = "right";
