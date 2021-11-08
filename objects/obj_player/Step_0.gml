@@ -5,6 +5,12 @@ blockright = place_meeting(x + 1, y, solid);
 blockleft = place_meeting(x - 1, y, solid);
 inblock = place_meeting(x, y, solid);
 
+//Check for buttons pressed
+right = keyboard_check(vk_right);
+left = keyboard_check(vk_left);
+up = keyboard_check_pressed(vk_up);
+down = keyboard_check_pressed(vk_down);
+
 if (gravdir == "down") {
 	
 	//Fall
@@ -12,46 +18,49 @@ if (gravdir == "down") {
 	
 	//Move left or right
 	hspeed = 0;
-	if (keyboard_check(vk_right) and !blockright) {
+	if (right and !blockright) {
 		hspeed += spd;
 		dir = "right";
 	}
-	if (keyboard_check(vk_left) and !blockleft) {
+	if (left and !blockleft) {
 		hspeed -= spd;
 		dir = "left";
 	}
 	
 	//Jump
-	if (keyboard_check(vk_up) and blockbelow) {
+	if (up and blockbelow) {
 		vspeed -= jump;
 	}
 	
 	//Slam
-	else if (keyboard_check(vk_down) and !blockbelow and !slamming) {
+	else if (down and !blockbelow and !slamming) {
 		vspeed += slam;
 		slamming = true;
 	}
 	
+	//Don't get stuck in the bottom of blocks
+	else if (blockabove and vspeed < 0) {
+		vspeed = 0;
+		while (inblock) {
+			y += 1;
+			inblock = place_meeting(x, y, solid);
+		}	
+		blockabove = place_meeting(x, y - 1, solid);
+	}
+	
 	//Stop falling
 	else if (blockbelow){
-		if (!keyboard_check(vk_up)) {
+		if (!up) {
 			vspeed = 0;
 		}
 		if (slamming == true and place_meeting(x, y + 1, obj_gswitch)) {
 			gravdir = "up";
 		}
+		while (inblock) {
+			y -= 1;
+			inblock = place_meeting(x, y, solid);
+		}
 		slamming = false;
-	}
-	
-	//Get out of blocks
-	while (inblock) {
-		y -= 1;
-		inblock = place_meeting(x, y, solid);
-	}
-	
-	//Don't get stuck in the bottom of blocks
-	if (blockabove and vspeed < 0) {
-		vspeed = 0;
 	}
 }
 else if (gravdir == "up") {
@@ -61,46 +70,49 @@ else if (gravdir == "up") {
 	
 	//Move left or right
 	hspeed = 0;
-	if (keyboard_check(vk_right) and !blockright) {
+	if (right and !blockright) {
 		hspeed += spd;
 		dir = "right";
 	}
-	if (keyboard_check(vk_left) and !blockleft) {
+	if (left and !blockleft) {
 		hspeed -= spd;
 		dir = "left";
 	}
 	
 	//Jump
-	if (keyboard_check(vk_up) and blockabove) {
+	if (up and blockabove) {
 		vspeed += jump;
 	}
 	
 	//Slam
-	else if (keyboard_check(vk_down) and !blockabove and !slamming) {
+	else if (down and !blockabove and !slamming) {
 		vspeed -= slam;
 		slamming = true;
 	}
 	
+	//Don't get stuck in the bottom of blocks
+	else if (blockbelow and vspeed > 0) {
+		vspeed = 0;
+		while (inblock) {
+			y -= 1;
+			inblock = place_meeting(x, y, solid);
+		}	
+		blockbelow = place_meeting(x, y + 1, solid);
+	}
+	
 	//Stop falling
 	else if (blockabove){
-		if (!keyboard_check(vk_up)) {
+		if (!up) {
 			vspeed = 0;
 		}
 		if (slamming == true and place_meeting(x, y - 1, obj_gswitch)) {
 			gravdir = "down";
 		}
+		while (inblock) {
+			y += 1;
+			inblock = place_meeting(x, y, solid);
+		}
 		slamming = false;
-	}
-	
-	//Get out of blocks
-	while (inblock) {
-		y += 1;
-		inblock = place_meeting(x, y, solid);
-	}
-	
-	//Don't get stuck in the bottom of blocks
-	if (blockbelow and vspeed > 0) {
-		vspeed = 0;
 	}
 }
 else if (gravdir == "right") {
