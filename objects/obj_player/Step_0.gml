@@ -1,9 +1,15 @@
 //Check for blocks
-blockbelow = place_meeting(x, y + 1, solid);
-blockabove = place_meeting(x, y - 1, solid);
-blockright = place_meeting(x + 1, y, solid);
-blockleft = place_meeting(x - 1, y, solid);
-inblock = place_meeting(x, y, solid);
+blockbelow = place_meeting(x, y + 1, all);
+blockabove = place_meeting(x, y - 1, all);
+blockright = place_meeting(x + 1, y, all);
+blockleft = place_meeting(x - 1, y, all);
+inblock = place_meeting(x, y, all);
+
+//Check for gswitches
+gswitchbelow = place_meeting(x, y + 1, obj_gswitch);
+gswitchabove = place_meeting(x, y - 1, obj_gswitch);
+gswitchright = place_meeting(x + 1, y, obj_gswitch);
+gswitchleft = place_meeting(x - 1, y, obj_gswitch);
 
 //Check for buttons pressed
 right = keyboard_check(vk_right);
@@ -41,11 +47,14 @@ if (gravdir == "down") {
 	//Don't get stuck in the bottom of blocks
 	else if (blockabove and vspeed < 0) {
 		vspeed = 0;
+		if (gswitchabove) {
+			gravdir = "up";
+		}
 		while (inblock) {
 			y += 1;
-			inblock = place_meeting(x, y, solid);
+			inblock = place_meeting(x, y, all);
 		}	
-		blockabove = place_meeting(x, y - 1, solid);
+		blockabove = place_meeting(x, y - 1, all);
 	}
 	
 	//Stop falling
@@ -53,12 +62,12 @@ if (gravdir == "down") {
 		if (!up) {
 			vspeed = 0;
 		}
-		if (slamming == true and place_meeting(x, y + 1, obj_gswitch)) {
+		if (slamming == true and gswitchbelow) {
 			gravdir = "up";
 		}
 		while (inblock) {
 			y -= 1;
-			inblock = place_meeting(x, y, solid);
+			inblock = place_meeting(x, y, all);
 		}
 		slamming = false;
 	}
@@ -93,11 +102,14 @@ else if (gravdir == "up") {
 	//Don't get stuck in the bottom of blocks
 	else if (blockbelow and vspeed > 0) {
 		vspeed = 0;
+		if (gswitchabove) {
+			gravdir = "up";
+		}
 		while (inblock) {
 			y -= 1;
-			inblock = place_meeting(x, y, solid);
+			inblock = place_meeting(x, y, all);
 		}	
-		blockbelow = place_meeting(x, y + 1, solid);
+		blockbelow = place_meeting(x, y + 1, all);
 	}
 	
 	//Stop falling
@@ -105,12 +117,12 @@ else if (gravdir == "up") {
 		if (!up) {
 			vspeed = 0;
 		}
-		if (slamming == true and place_meeting(x, y - 1, obj_gswitch)) {
+		if (slamming == true and gswitchabove) {
 			gravdir = "down";
 		}
 		while (inblock) {
 			y += 1;
-			inblock = place_meeting(x, y, solid);
+			inblock = place_meeting(x, y, all);
 		}
 		slamming = false;
 	}

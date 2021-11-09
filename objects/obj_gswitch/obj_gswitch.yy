@@ -3,7 +3,7 @@
     "name": "spr_gswitch",
     "path": "sprites/spr_gswitch/spr_gswitch.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
