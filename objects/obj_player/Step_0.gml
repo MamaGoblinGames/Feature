@@ -1,9 +1,9 @@
 //Check for blocks
-blockbelow = place_meeting(x, y + 1, all);
-blockabove = place_meeting(x, y - 1, all);
-blockright = place_meeting(x + 1, y, all);
-blockleft = place_meeting(x - 1, y, all);
-inblock = place_meeting(x, y, all);
+blockbelow = place_meeting(x, y + 1, global.solid_objs);
+blockabove = place_meeting(x, y - 1, global.solid_objs);
+blockright = place_meeting(x + 1, y, global.solid_objs);
+blockleft = place_meeting(x - 1, y, global.solid_objs);
+inblock = place_meeting(x, y, global.solid_objs);
 
 //Check for gswitches
 gswitchbelow = place_meeting(x, y + 1, obj_gswitch);
@@ -17,11 +17,33 @@ spdswitchabove = place_meeting(x, y - 1, obj_spdswitch);
 spdswitchright = place_meeting(x + 1, y, obj_spdswitch);
 spdswitchleft = place_meeting(x - 1, y, obj_spdswitch);
 
+//Check for firewalls
+infirewall = place_meeting(x, y, obj_firewallh) or place_meeting(x, y, obj_firewallv);
+
 //Check for buttons pressed
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
 up = keyboard_check_pressed(vk_up);
 down = keyboard_check_pressed(vk_down);
+
+//Check if dead
+if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
+	spd = 1;
+	grav = 0.1;
+	gravdir = "down";
+	jump = 3;
+	slam = 3;
+	slamming = false;
+	dir = "right";
+	right = false;
+	left = false;
+	up = false;
+	down = false;
+	x = global.spawnx;
+	y = global.spawny;
+	vspeed = 0;
+	hspeed = 0;
+}
 
 if (gravdir == "down") {
 	
@@ -61,9 +83,9 @@ if (gravdir == "down") {
 		}
 		while (inblock) {
 			y += 1;
-			inblock = place_meeting(x, y, all);
+			inblock = place_meeting(x, y, global.solid_objs);
 		}	
-		blockabove = place_meeting(x, y - 1, all);
+		blockabove = place_meeting(x, y - 1, global.solid_objs);
 	}
 	
 	//Stop falling
@@ -81,7 +103,7 @@ if (gravdir == "down") {
 		}
 		while (inblock) {
 			y -= 1;
-			inblock = place_meeting(x, y, all);
+			inblock = place_meeting(x, y, global.solid_objs);
 		}
 		slamming = false;
 	}
@@ -124,9 +146,9 @@ else if (gravdir == "up") {
 		}
 		while (inblock) {
 			y -= 1;
-			inblock = place_meeting(x, y, all);
+			inblock = place_meeting(x, y, global.solid_objs);
 		}	
-		blockbelow = place_meeting(x, y + 1, all);
+		blockbelow = place_meeting(x, y + 1, global.solid_objs);
 	}
 	
 	//Stop falling
@@ -144,7 +166,7 @@ else if (gravdir == "up") {
 		}
 		while (inblock) {
 			y += 1;
-			inblock = place_meeting(x, y, all);
+			inblock = place_meeting(x, y, global.solid_objs);
 		}
 		slamming = false;
 	}

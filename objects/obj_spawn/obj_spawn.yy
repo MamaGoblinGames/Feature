@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_spawn",
+    "path": "sprites/spr_spawn/spr_spawn.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -27,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_game",
+  "name": "obj_spawn",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -26,3 +26,7 @@ spdswitchabove = false;
 spdswitchbelow = false;
 spdswitchright = false;
 spdswitchleft = false;
+
+//Set starting position
+x = global.spawnx;
+y = global.spawny;
