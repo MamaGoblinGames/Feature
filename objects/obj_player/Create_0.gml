@@ -2,7 +2,6 @@ spd = 1;
 grav = 0.1;
 gravdir = "down";
 jump = 3;
-slam = 3;
 slamming = false;
 dir = "right";
 right = false;
@@ -26,6 +25,10 @@ spdswitchabove = false;
 spdswitchbelow = false;
 spdswitchright = false;
 spdswitchleft = false;
+jumpswitchabove = false;
+jumpswitchbelow = false;
+jumpswitchright = false;
+jumpswitchleft = false;
 
 //Set starting position
 x = global.spawnx;

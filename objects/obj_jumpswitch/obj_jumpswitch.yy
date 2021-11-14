@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_firewallh",
-    "path": "sprites/spr_firewallh/spr_firewallh.yy",
+    "name": "spr_jumpswitch",
+    "path": "sprites/spr_jumpswitch/spr_jumpswitch.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_firewallh",
+  "name": "obj_jumpswitch",
   "tags": [],
   "resourceType": "GMObject",
 }
