@@ -22,3 +22,7 @@ gswitchbelow = false;
 gswitchabove = false;
 gswitchright = false;
 gswitchleft = false;
+spdswitchabove = false;
+spdswitchbelow = false;
+spdswitchright = false;
+spdswitchleft = false;

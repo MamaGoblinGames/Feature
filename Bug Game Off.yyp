@@ -1,5 +1,7 @@
 {
   "resources": [
+    {"id":{"name":"obj_spdswitch","path":"objects/obj_spdswitch/obj_spdswitch.yy",},"order":4,},
+    {"id":{"name":"spr_spdswitch","path":"sprites/spr_spdswitch/spr_spdswitch.yy",},"order":8,},
     {"id":{"name":"spr_idleright","path":"sprites/spr_idleright/spr_idleright.yy",},"order":6,},
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"order":2,},
     {"id":{"name":"spr_gswitch","path":"sprites/spr_gswitch/spr_gswitch.yy",},"order":7,},

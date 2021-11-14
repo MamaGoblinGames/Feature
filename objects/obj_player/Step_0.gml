@@ -11,6 +11,12 @@ gswitchabove = place_meeting(x, y - 1, obj_gswitch);
 gswitchright = place_meeting(x + 1, y, obj_gswitch);
 gswitchleft = place_meeting(x - 1, y, obj_gswitch);
 
+//Check for spdswitches
+spdswitchbelow = place_meeting(x, y + 1, obj_spdswitch);
+spdswitchabove = place_meeting(x, y - 1, obj_spdswitch);
+spdswitchright = place_meeting(x + 1, y, obj_spdswitch);
+spdswitchleft = place_meeting(x - 1, y, obj_spdswitch);
+
 //Check for buttons pressed
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
@@ -50,6 +56,9 @@ if (gravdir == "down") {
 		if (gswitchabove) {
 			gravdir = "up";
 		}
+		if (spdswitchabove) {
+			spd += 0.2;
+		}
 		while (inblock) {
 			y += 1;
 			inblock = place_meeting(x, y, all);
@@ -62,8 +71,13 @@ if (gravdir == "down") {
 		if (!up) {
 			vspeed = 0;
 		}
-		if (slamming == true and gswitchbelow) {
-			gravdir = "up";
+		if (slamming == true) {
+			if (gswitchbelow) {
+				gravdir = "up";
+			}
+			if (spdswitchbelow && spd > 0.4) {
+				spd -= 0.2;
+			}
 		}
 		while (inblock) {
 			y -= 1;
@@ -102,8 +116,11 @@ else if (gravdir == "up") {
 	//Don't get stuck in the bottom of blocks
 	else if (blockbelow and vspeed > 0) {
 		vspeed = 0;
-		if (gswitchabove) {
-			gravdir = "up";
+		if (gswitchbelow) {
+			gravdir = "down";
+		}
+		if (spdswitchbelow && spd > 0.4) {
+			spd -= 0.2;
 		}
 		while (inblock) {
 			y -= 1;
@@ -117,8 +134,13 @@ else if (gravdir == "up") {
 		if (!up) {
 			vspeed = 0;
 		}
-		if (slamming == true and gswitchabove) {
-			gravdir = "down";
+		if (slamming == true) {
+			if (gswitchabove) {
+				gravdir = "down";
+			}
+			if (spdswitchabove) {
+				spd += 0.2;
+			}
 		}
 		while (inblock) {
 			y += 1;
