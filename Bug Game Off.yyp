@@ -1,7 +1,7 @@
 {
   "resources": [
     {"id":{"name":"obj_spdswitch","path":"objects/obj_spdswitch/obj_spdswitch.yy",},"order":4,},
-    {"id":{"name":"obj_firewallv","path":"objects/obj_firewallv/obj_firewallv.yy",},"order":6,},
+    {"id":{"name":"obj_firewall","path":"objects/obj_firewall/obj_firewall.yy",},"order":6,},
     {"id":{"name":"obj_jumpswitch","path":"objects/obj_jumpswitch/obj_jumpswitch.yy",},"order":8,},
     {"id":{"name":"spr_firewallh","path":"sprites/spr_firewallh/spr_firewallh.yy",},"order":11,},
     {"id":{"name":"spr_jumpswitch","path":"sprites/spr_jumpswitch/spr_jumpswitch.yy",},"order":8,},
@@ -12,7 +12,6 @@
     {"id":{"name":"spr_walkleft","path":"sprites/spr_walkleft/spr_walkleft.yy",},"order":3,},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"order":0,},
     {"id":{"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},"order":3,},
-    {"id":{"name":"obj_firewallh","path":"objects/obj_firewallh/obj_firewallh.yy",},"order":5,},
     {"id":{"name":"spr_idleleft","path":"sprites/spr_idleleft/spr_idleleft.yy",},"order":2,},
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},"order":1,},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},"order":4,},

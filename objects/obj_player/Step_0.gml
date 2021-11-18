@@ -24,7 +24,7 @@ jumpswitchright = place_meeting(x + 1, y, obj_jumpswitch);
 jumpswitchleft = place_meeting(x - 1, y, obj_jumpswitch);
 
 //Check for firewalls
-infirewall = place_meeting(x, y, obj_firewallh) or place_meeting(x, y, obj_firewallv);
+infirewall = place_meeting(x, y, obj_firewall);
 
 //Check for buttons pressed
 right = keyboard_check(vk_right);
