@@ -17,6 +17,12 @@ spdswitchabove = place_meeting(x, y - 1, obj_spdswitch);
 spdswitchright = place_meeting(x + 1, y, obj_spdswitch);
 spdswitchleft = place_meeting(x - 1, y, obj_spdswitch);
 
+//Check for jumpswitches
+jumpswitchbelow = place_meeting(x, y + 1, obj_jumpswitch);
+jumpswitchabove = place_meeting(x, y - 1, obj_jumpswitch);
+jumpswitchright = place_meeting(x + 1, y, obj_jumpswitch);
+jumpswitchleft = place_meeting(x - 1, y, obj_jumpswitch);
+
 //Check for firewalls
 infirewall = place_meeting(x, y, obj_firewallh) or place_meeting(x, y, obj_firewallv);
 
@@ -32,7 +38,6 @@ if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
 	grav = 0.1;
 	gravdir = "down";
 	jump = 3;
-	slam = 3;
 	slamming = false;
 	dir = "right";
 	right = false;
@@ -68,7 +73,7 @@ if (gravdir == "down") {
 	
 	//Slam
 	else if (down and !blockbelow and !slamming) {
-		vspeed += slam;
+		vspeed += jump;
 		slamming = true;
 	}
 	
@@ -78,8 +83,11 @@ if (gravdir == "down") {
 		if (gswitchabove) {
 			gravdir = "up";
 		}
-		if (spdswitchabove) {
+		if (spdswitchabove and spd < 3) {
 			spd += 0.2;
+		}
+		if (jumpswitchabove and jump < 6) {
+			jump += 0.5;
 		}
 		while (inblock) {
 			y += 1;
@@ -97,8 +105,11 @@ if (gravdir == "down") {
 			if (gswitchbelow) {
 				gravdir = "up";
 			}
-			if (spdswitchbelow && spd > 0.4) {
+			if (spdswitchbelow and spd > 0.4) {
 				spd -= 0.2;
+			}
+			if (jumpswitchbelow and jump > 1.5) {
+				jump -= 0.5;
 			}
 		}
 		while (inblock) {
@@ -131,7 +142,7 @@ else if (gravdir == "up") {
 	
 	//Slam
 	else if (down and !blockabove and !slamming) {
-		vspeed -= slam;
+		vspeed -= jump;
 		slamming = true;
 	}
 	
@@ -141,8 +152,11 @@ else if (gravdir == "up") {
 		if (gswitchbelow) {
 			gravdir = "down";
 		}
-		if (spdswitchbelow && spd > 0.4) {
+		if (spdswitchbelow and spd > 0.4) {
 			spd -= 0.2;
+		}
+		if (jumpswitchbelow and jump > 1.5) {
+			jump -= 0.5;
 		}
 		while (inblock) {
 			y -= 1;
@@ -160,8 +174,11 @@ else if (gravdir == "up") {
 			if (gswitchabove) {
 				gravdir = "down";
 			}
-			if (spdswitchabove) {
+			if (spdswitchabove and spd < 3) {
 				spd += 0.2;
+			}
+			if (jumpswitchabove and jump < 6) {
+				jump += 0.5;
 			}
 		}
 		while (inblock) {
