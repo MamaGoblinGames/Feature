@@ -26,6 +26,9 @@ jumpswitchleft = place_meeting(x - 1, y, obj_jumpswitch);
 //Check for firewalls
 infirewall = place_meeting(x, y, obj_firewall);
 
+//Check for flag
+inflag = place_meeting(x, y, obj_flag);
+
 //Check for buttons pressed
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
@@ -48,6 +51,11 @@ if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
 	y = global.spawny;
 	vspeed = 0;
 	hspeed = 0;
+}
+
+//Check if win
+else if (inflag) {
+	room_next(room);
 }
 
 if (gravdir == "down") {

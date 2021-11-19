@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_firewall",
-    "path": "sprites/spr_firewall/spr_firewall.yy",
+    "name": "spr_flag",
+    "path": "sprites/spr_flag/spr_flag.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_firewall",
+  "name": "obj_flag",
   "tags": [],
   "resourceType": "GMObject",
 }
