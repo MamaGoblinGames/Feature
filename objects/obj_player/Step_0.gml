@@ -1,9 +1,52 @@
+//Switch to test room
+if (keyboard_check_pressed(ord("T"))) {
+	room = rm_test;
+}
+
 //Check for blocks
-blockbelow = place_meeting(x, y + 1, global.solid_objs);
-blockabove = place_meeting(x, y - 1, global.solid_objs);
-blockright = place_meeting(x + 1, y, global.solid_objs);
-blockleft = place_meeting(x - 1, y, global.solid_objs);
-inblock = place_meeting(x, y, global.solid_objs);
+blockbelow = place_meeting(x, y + 1, obj_block);
+blockabove = place_meeting(x, y - 1, obj_block);
+blockright = place_meeting(x + 1, y, obj_block);
+blockleft = place_meeting(x - 1, y, obj_block);
+inblock = place_meeting(x, y, obj_block);
+
+//Check for red blocks
+if (global.block_red = true) {
+	if (blockbelow = false) {
+		blockbelow = place_meeting(x, y + 1, obj_redblock);
+	}
+	if (blockabove = false) {
+		blockabove = place_meeting(x, y - 1, obj_redblock);
+	}
+	if (blockright = false) {
+		blockright = place_meeting(x + 1, y, obj_redblock);
+	}
+	if (blockleft = false) {
+		blockleft = place_meeting(x - 1, y, obj_redblock);
+	}
+	if (inblock = false) {
+		inblock = place_meeting(x, y, obj_redblock);
+	}
+}
+
+//Check for blue blocks
+else {
+	if (blockbelow = false) {
+		blockbelow = place_meeting(x, y + 1, obj_blueblock);
+	}
+	if (blockabove = false) {
+		blockabove = place_meeting(x, y - 1, obj_blueblock);
+	}
+	if (blockright = false) {
+		blockright = place_meeting(x + 1, y, obj_blueblock);
+	}
+	if (blockleft = false) {
+		blockleft = place_meeting(x - 1, y, obj_blueblock);
+	}
+	if (inblock = false) {
+		inblock = place_meeting(x, y, obj_blueblock);
+	}
+}
 
 //Check for gswitches
 gswitchbelow = place_meeting(x, y + 1, obj_gswitch);
@@ -22,6 +65,12 @@ jumpswitchbelow = place_meeting(x, y + 1, obj_jumpswitch);
 jumpswitchabove = place_meeting(x, y - 1, obj_jumpswitch);
 jumpswitchright = place_meeting(x + 1, y, obj_jumpswitch);
 jumpswitchleft = place_meeting(x - 1, y, obj_jumpswitch);
+
+//Check for blockswitches
+blockswitchbelow = place_meeting(x, y + 1, obj_blockswitch);
+blockswitchabove = place_meeting(x, y - 1, obj_blockswitch);
+blockswitchright = place_meeting(x + 1, y, obj_blockswitch);
+blockswitchleft = place_meeting(x - 1, y, obj_blockswitch);
 
 //Check for firewalls
 infirewall = place_meeting(x, y, obj_firewall);
@@ -51,6 +100,7 @@ if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
 	y = global.spawny;
 	vspeed = 0;
 	hspeed = 0;
+	global.block_red = true;
 }
 
 //Check if win
@@ -97,11 +147,30 @@ if (gravdir == "down") {
 		if (jumpswitchabove and jump < 6) {
 			jump += 0.5;
 		}
+		if (blockswitchabove) {
+			global.block_red = !global.block_red;
+		}
 		while (inblock) {
 			y += 1;
-			inblock = place_meeting(x, y, global.solid_objs);
+			inblock = place_meeting(x, y, obj_block);
+			if (!inblock) {
+				if (global.block_red) {
+					inblock = place_meeting(x, y, obj_redblock);
+				}
+				else {
+					inblock = place_meeting(x, y, obj_blueblock);
+				}
+			}
 		}	
-		blockabove = place_meeting(x, y - 1, global.solid_objs);
+		blockabove = place_meeting(x, y - 1, obj_block);
+		if (!blockabove) {
+			if (global.block_red) {
+				blockabove = place_meeting(x, y - 1, obj_redblock);
+			}
+			else {
+				blockabove = place_meeting(x, y - 1, obj_blueblock);
+			}
+		}
 	}
 	
 	//Stop falling
@@ -119,10 +188,21 @@ if (gravdir == "down") {
 			if (jumpswitchbelow and jump > 1.5) {
 				jump -= 0.5;
 			}
+			if (blockswitchbelow) {
+				global.block_red = !global.block_red;
+			}
 		}
 		while (inblock) {
 			y -= 1;
-			inblock = place_meeting(x, y, global.solid_objs);
+			inblock = place_meeting(x, y, obj_block);
+			if (!inblock) {
+				if (global.block_red) {
+					inblock = place_meeting(x, y, obj_redblock);
+				}
+				else {
+					inblock = place_meeting(x, y, obj_blueblock);
+				}
+			}
 		}
 		slamming = false;
 	}
@@ -166,11 +246,30 @@ else if (gravdir == "up") {
 		if (jumpswitchbelow and jump > 1.5) {
 			jump -= 0.5;
 		}
+		if (blockswitchbelow) {
+			global.block_red = !global.block_red;
+		}
 		while (inblock) {
 			y -= 1;
-			inblock = place_meeting(x, y, global.solid_objs);
+			inblock = place_meeting(x, y, obj_block);
+			if (!inblock) {
+				if (global.block_red) {
+					inblock = place_meeting(x, y, obj_redblock);
+				}
+				else {
+					inblock = place_meeting(x, y, obj_blueblock);
+				}
+			}
 		}	
-		blockbelow = place_meeting(x, y + 1, global.solid_objs);
+		blockbelow = place_meeting(x, y + 1, obj_block);
+		if (!inblock) {
+			if (global.block_red) {
+				blockbelow = place_meeting(x, y + 1, obj_redblock);
+			}
+			else {
+				blockbelow = place_meeting(x, y + 1, obj_blueblock);
+			}
+		}
 	}
 	
 	//Stop falling
@@ -188,10 +287,21 @@ else if (gravdir == "up") {
 			if (jumpswitchabove and jump < 6) {
 				jump += 0.5;
 			}
+			if (blockswitchabove) {
+				global.block_red = !global.block_red;
+			}
 		}
 		while (inblock) {
 			y += 1;
-			inblock = place_meeting(x, y, global.solid_objs);
+			inblock = place_meeting(x, y, obj_block);
+			if (!inblock) {
+				if (global.block_red) {
+					inblock = place_meeting(x, y, obj_redblock);
+				}
+				else {
+					inblock = place_meeting(x, y, obj_blueblock);
+				}
+			}
 		}
 		slamming = false;
 	}
