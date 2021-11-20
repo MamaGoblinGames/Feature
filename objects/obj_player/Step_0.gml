@@ -55,7 +55,7 @@ if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
 
 //Check if win
 else if (inflag) {
-	room_next(room);
+	room_goto_next();
 }
 
 if (gravdir == "down") {
