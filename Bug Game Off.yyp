@@ -40,6 +40,7 @@
     {"id":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},"order":7,},
     {"id":{"name":"CutiveMono","path":"fonts/CutiveMono/CutiveMono.yy",},"order":1,},
     {"id":{"name":"spr_fallright","path":"sprites/spr_fallright/spr_fallright.yy",},"order":0,},
+    {"id":{"name":"spr_block_cage","path":"sprites/spr_block_cage/spr_block_cage.yy",},"order":25,},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},"order":21,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
     {"id":{"name":"spr_walkright","path":"sprites/spr_walkright/spr_walkright.yy",},"order":1,},
