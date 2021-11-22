@@ -88,7 +88,7 @@ down = keyboard_check_pressed(vk_down);
 if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
 	spd = 1;
 	grav = 0.1;
-	gravdir = "down";
+	global.gravdir = "down";
 	jump = 3;
 	slamming = false;
 	dir = "right";
@@ -108,7 +108,7 @@ else if (inflag) {
 	room_goto_next();
 }
 
-if (gravdir == "down") {
+if (global.gravdir == "down") {
 	
 	//Fall
 	vspeed += grav;
@@ -139,7 +139,7 @@ if (gravdir == "down") {
 	else if (blockabove and vspeed < 0) {
 		vspeed = 0;
 		if (gswitchabove) {
-			gravdir = "up";
+			global.gravdir = "up";
 		}
 		if (spdswitchabove and spd < 3) {
 			spd += 0.2;
@@ -180,7 +180,7 @@ if (gravdir == "down") {
 		}
 		if (slamming == true) {
 			if (gswitchbelow) {
-				gravdir = "up";
+				global.gravdir = "up";
 			}
 			if (spdswitchbelow and spd > 0.4) {
 				spd -= 0.2;
@@ -207,7 +207,7 @@ if (gravdir == "down") {
 		slamming = false;
 	}
 }
-else if (gravdir == "up") {
+else if (global.gravdir == "up") {
 	
 	//Fall
 	vspeed -= grav;
@@ -238,7 +238,7 @@ else if (gravdir == "up") {
 	else if (blockbelow and vspeed > 0) {
 		vspeed = 0;
 		if (gswitchbelow) {
-			gravdir = "down";
+			global.gravdir = "down";
 		}
 		if (spdswitchbelow and spd > 0.4) {
 			spd -= 0.2;
@@ -279,7 +279,7 @@ else if (gravdir == "up") {
 		}
 		if (slamming == true) {
 			if (gswitchabove) {
-				gravdir = "down";
+				global.gravdir = "down";
 			}
 			if (spdswitchabove and spd < 3) {
 				spd += 0.2;
@@ -306,10 +306,10 @@ else if (gravdir == "up") {
 		slamming = false;
 	}
 }
-else if (gravdir == "right") {
+else if (global.gravdir == "right") {
 	hspeed += grav;
 }
-else if (gravdir == "left") {
+else if (global.gravdir == "left") {
 	hspeed -= grav;
 }
 
@@ -342,9 +342,9 @@ else if (dir == "left") {
 }
 
 //Flip image
-if (gravdir == "up") {
+if (global.gravdir == "up") {
 	image_yscale = -1;
 }
-else if (gravdir == "down") {
+else if (global.gravdir == "down") {
 	image_yscale = 1;
 }

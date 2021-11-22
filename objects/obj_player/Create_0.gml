@@ -1,6 +1,6 @@
 spd = 1;
 grav = 0.1;
-gravdir = "down";
+global.gravdir = "down";
 jump = 3;
 slamming = false;
 dir = "right";
