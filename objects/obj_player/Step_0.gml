@@ -3,6 +3,16 @@ if (keyboard_check_pressed(ord("T"))) {
 	room = rm_test;
 }
 
+//Skip level
+if (keyboard_check_pressed(ord("S"))) {
+	room_goto_next();
+}
+
+//Go back through levels
+if (keyboard_check_pressed(ord("B"))) {
+	room_goto_previous();
+}
+
 //Check for blocks
 blockbelow = place_meeting(x, y + 1, obj_block);
 blockabove = place_meeting(x, y - 1, obj_block);
@@ -70,11 +80,11 @@ fireswitchabove = place_meeting(x, y - 1, obj_fireswitch);
 
 //Check for firewalls
 if (global.fire_on){
-	infirewall = place_meeting(x, y, obj_firewall);
+	infirewall = place_meeting(x, y, obj_firewall) or place_meeting(x, y, obj_fire);
 }
 
 //Check for flag
-inflag = place_meeting(x, y, obj_flag);
+inflag = place_meeting(x, y, obj_flag) or place_meeting(x, y, obj_fire);
 
 //Check for buttons pressed
 right = keyboard_check(vk_right);
@@ -83,7 +93,7 @@ up = keyboard_check_pressed(vk_up);
 down = keyboard_check_pressed(vk_down);
 
 //Check if dead
-if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
+if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height or keyboard_check_pressed(ord("R"))) {
 	spd = 1;
 	grav = 0.1;
 	global.gravdir = "down";
