@@ -72,8 +72,16 @@ blockswitchabove = place_meeting(x, y - 1, obj_blockswitch);
 blockswitchright = place_meeting(x + 1, y, obj_blockswitch);
 blockswitchleft = place_meeting(x - 1, y, obj_blockswitch);
 
+//Check for fireswitches
+fireswitchbelow = place_meeting(x, y + 1, obj_fireswitch);
+fireswitchabove = place_meeting(x, y - 1, obj_fireswitch);
+fireswitchright = place_meeting(x + 1, y, obj_fireswitch);
+fireswitchleft = place_meeting(x - 1, y, obj_fireswitch);
+
 //Check for firewalls
-infirewall = place_meeting(x, y, obj_firewall);
+if (global.fire_on){
+	infirewall = place_meeting(x, y, obj_firewall);
+}
 
 //Check for flag
 inflag = place_meeting(x, y, obj_flag);
@@ -101,6 +109,7 @@ if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
 	vspeed = 0;
 	hspeed = 0;
 	global.block_red = true;
+	global.fire_on = true;
 }
 
 //Check if win
@@ -150,6 +159,10 @@ if (gravdir == "down") {
 		if (blockswitchabove) {
 			global.block_red = !global.block_red;
 		}
+		if (fireswitchabove) {
+			alarm[0] = 2 * room_speed;
+			global.fire_on = false;
+		}
 		while (inblock) {
 			y += 1;
 			inblock = place_meeting(x, y, obj_block);
@@ -190,6 +203,10 @@ if (gravdir == "down") {
 			}
 			if (blockswitchbelow) {
 				global.block_red = !global.block_red;
+			}
+			if (fireswitchbelow) {
+				alarm[0] = 2 * room_speed;
+				global.fire_on = false;
 			}
 		}
 		while (inblock) {
@@ -249,6 +266,10 @@ else if (gravdir == "up") {
 		if (blockswitchbelow) {
 			global.block_red = !global.block_red;
 		}
+		if (fireswitchbelow) {
+			alarm[0] = 2 * room_speed;
+			global.fire_on = false;
+		}
 		while (inblock) {
 			y -= 1;
 			inblock = place_meeting(x, y, obj_block);
@@ -289,6 +310,10 @@ else if (gravdir == "up") {
 			}
 			if (blockswitchabove) {
 				global.block_red = !global.block_red;
+			}
+			if (fireswitchabove) {
+				alarm[0] = 2 * room_speed;
+				global.fire_on = false;
 			}
 		}
 		while (inblock) {

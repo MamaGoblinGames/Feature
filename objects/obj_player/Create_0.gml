@@ -29,6 +29,14 @@ jumpswitchabove = false;
 jumpswitchbelow = false;
 jumpswitchright = false;
 jumpswitchleft = false;
+blockswitchabove = false;
+blockswitchbelow = false;
+blockswitchright = false;
+blockswitchleft = false;
+fireswitchabove = false;
+fireswitchbelow = false;
+fireswitchright = false;
+fireswitchleft = false;
 
 //Set starting position
 x = global.spawnx;
