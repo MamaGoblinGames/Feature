@@ -160,7 +160,7 @@ if (global.gravdir == "down") {
 			global.block_red = !global.block_red;
 		}
 		if (fireswitchabove) {
-			alarm[0] = 2 * room_speed;
+			alarm[0] = 3 * room_speed;
 			global.fire_on = false;
 		}
 		while (inblock) {
