@@ -1,3 +1,2 @@
-//Solid objects
-global.solid_objs = obj_block;
 global.block_red = true;
+global.fire_on = true;

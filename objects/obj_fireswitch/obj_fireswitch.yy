@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_firewall",
-    "path": "sprites/spr_firewall/spr_firewall.yy",
+    "name": "spr_fireswitch",
+    "path": "sprites/spr_fireswitch/spr_fireswitch.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,10 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_firewall",
+  "name": "obj_fireswitch",
   "tags": [],
   "resourceType": "GMObject",
 }

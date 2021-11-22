@@ -1,0 +1,1 @@
+global.fire_on = true;
