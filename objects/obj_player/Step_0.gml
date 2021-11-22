@@ -51,32 +51,22 @@ else {
 //Check for gswitches
 gswitchbelow = place_meeting(x, y + 1, obj_gswitch);
 gswitchabove = place_meeting(x, y - 1, obj_gswitch);
-gswitchright = place_meeting(x + 1, y, obj_gswitch);
-gswitchleft = place_meeting(x - 1, y, obj_gswitch);
 
 //Check for spdswitches
 spdswitchbelow = place_meeting(x, y + 1, obj_spdswitch);
 spdswitchabove = place_meeting(x, y - 1, obj_spdswitch);
-spdswitchright = place_meeting(x + 1, y, obj_spdswitch);
-spdswitchleft = place_meeting(x - 1, y, obj_spdswitch);
 
 //Check for jumpswitches
 jumpswitchbelow = place_meeting(x, y + 1, obj_jumpswitch);
 jumpswitchabove = place_meeting(x, y - 1, obj_jumpswitch);
-jumpswitchright = place_meeting(x + 1, y, obj_jumpswitch);
-jumpswitchleft = place_meeting(x - 1, y, obj_jumpswitch);
 
 //Check for blockswitches
 blockswitchbelow = place_meeting(x, y + 1, obj_blockswitch);
 blockswitchabove = place_meeting(x, y - 1, obj_blockswitch);
-blockswitchright = place_meeting(x + 1, y, obj_blockswitch);
-blockswitchleft = place_meeting(x - 1, y, obj_blockswitch);
 
 //Check for fireswitches
 fireswitchbelow = place_meeting(x, y + 1, obj_fireswitch);
 fireswitchabove = place_meeting(x, y - 1, obj_fireswitch);
-fireswitchright = place_meeting(x + 1, y, obj_fireswitch);
-fireswitchleft = place_meeting(x - 1, y, obj_fireswitch);
 
 //Check for firewalls
 if (global.fire_on){
@@ -97,7 +87,7 @@ if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height) {
 	spd = 1;
 	grav = 0.1;
 	global.gravdir = "down";
-	jump = 3;
+	global.jump = 3;
 	slamming = false;
 	dir = "right";
 	right = false;
@@ -135,12 +125,12 @@ if (global.gravdir == "down") {
 	
 	//Jump
 	if (up and blockbelow) {
-		vspeed -= jump;
+		vspeed -= global.jump;
 	}
 	
 	//Slam
 	else if (down and !blockbelow and !slamming) {
-		vspeed += jump;
+		vspeed += global.jump;
 		slamming = true;
 	}
 	
@@ -153,8 +143,8 @@ if (global.gravdir == "down") {
 		if (spdswitchabove and spd < 3) {
 			spd += 0.2;
 		}
-		if (jumpswitchabove and jump < 6) {
-			jump += 0.5;
+		if (jumpswitchabove and global.jump < 5.5) {
+			global.jump += 0.5;
 		}
 		if (blockswitchabove) {
 			global.block_red = !global.block_red;
@@ -198,8 +188,8 @@ if (global.gravdir == "down") {
 			if (spdswitchbelow and spd > 0.4) {
 				spd -= 0.2;
 			}
-			if (jumpswitchbelow and jump > 1.5) {
-				jump -= 0.5;
+			if (jumpswitchbelow and global.jump > 1.5) {
+				global.jump -= 0.5;
 			}
 			if (blockswitchbelow) {
 				global.block_red = !global.block_red;
@@ -242,12 +232,12 @@ else if (global.gravdir == "up") {
 	
 	//Jump
 	if (up and blockabove) {
-		vspeed += jump;
+		vspeed += global.jump;
 	}
 	
 	//Slam
 	else if (down and !blockabove and !slamming) {
-		vspeed -= jump;
+		vspeed -= global.jump;
 		slamming = true;
 	}
 	
@@ -260,8 +250,8 @@ else if (global.gravdir == "up") {
 		if (spdswitchbelow and spd > 0.4) {
 			spd -= 0.2;
 		}
-		if (jumpswitchbelow and jump > 1.5) {
-			jump -= 0.5;
+		if (jumpswitchbelow and global.jump > 1.5) {
+			global.jump -= 0.5;
 		}
 		if (blockswitchbelow) {
 			global.block_red = !global.block_red;
@@ -305,8 +295,8 @@ else if (global.gravdir == "up") {
 			if (spdswitchabove and spd < 3) {
 				spd += 0.2;
 			}
-			if (jumpswitchabove and jump < 6) {
-				jump += 0.5;
+			if (jumpswitchabove and global.jump < 5.5) {
+				global.jump += 0.5;
 			}
 			if (blockswitchabove) {
 				global.block_red = !global.block_red;
@@ -330,12 +320,6 @@ else if (global.gravdir == "up") {
 		}
 		slamming = false;
 	}
-}
-else if (global.gravdir == "right") {
-	hspeed += grav;
-}
-else if (global.gravdir == "left") {
-	hspeed -= grav;
 }
 
 //Change sprites
