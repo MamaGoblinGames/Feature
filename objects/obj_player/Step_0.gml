@@ -84,7 +84,7 @@ if (global.fire_on){
 }
 
 //Check for flag
-inflag = place_meeting(x, y, obj_flag) or place_meeting(x, y, obj_fire);
+inflag = place_meeting(x, y, obj_flag);
 
 //Check for buttons pressed
 right = keyboard_check(vk_right);
