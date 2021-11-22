@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_block",
-    "path": "sprites/spr_block/spr_block.yy",
+    "name": "spr_block_cage",
+    "path": "sprites/spr_block_cage/spr_block_cage.yy",
   },
   "solid": false,
   "visible": true,
