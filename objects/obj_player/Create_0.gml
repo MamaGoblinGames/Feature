@@ -1,4 +1,4 @@
-spd = 1;
+global.spd = 1;
 grav = 0.1;
 global.gravdir = "down";
 global.jump = 3;

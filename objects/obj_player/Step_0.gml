@@ -94,7 +94,7 @@ down = keyboard_check_pressed(vk_down);
 
 //Check if dead
 if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height or keyboard_check_pressed(ord("R"))) {
-	spd = 1;
+	global.spd = 1;
 	grav = 0.1;
 	global.gravdir = "down";
 	global.jump = 3;
@@ -125,11 +125,11 @@ if (global.gravdir == "down") {
 	//Move left or right
 	hspeed = 0;
 	if (right and !blockright) {
-		hspeed += spd;
+		hspeed += global.spd;
 		dir = "right";
 	}
 	if (left and !blockleft) {
-		hspeed -= spd;
+		hspeed -= global.spd;
 		dir = "left";
 	}
 	
@@ -150,8 +150,8 @@ if (global.gravdir == "down") {
 		if (gswitchabove) {
 			global.gravdir = "up";
 		}
-		if (spdswitchabove and spd < 3) {
-			spd += 0.2;
+		if (spdswitchabove and global.spd < 3) {
+			global.spd += 0.2;
 		}
 		if (jumpswitchabove and global.jump < 5.5) {
 			global.jump += 0.5;
@@ -195,8 +195,8 @@ if (global.gravdir == "down") {
 			if (gswitchbelow) {
 				global.gravdir = "up";
 			}
-			if (spdswitchbelow and spd > 0.4) {
-				spd -= 0.2;
+			if (spdswitchbelow and global.spd > 0.4) {
+				global.spd -= 0.2;
 			}
 			if (jumpswitchbelow and global.jump > 1.5) {
 				global.jump -= 0.5;
@@ -232,11 +232,11 @@ else if (global.gravdir == "up") {
 	//Move left or right
 	hspeed = 0;
 	if (right and !blockright) {
-		hspeed += spd;
+		hspeed += global.spd;
 		dir = "right";
 	}
 	if (left and !blockleft) {
-		hspeed -= spd;
+		hspeed -= global.spd;
 		dir = "left";
 	}
 	
@@ -257,8 +257,8 @@ else if (global.gravdir == "up") {
 		if (gswitchbelow) {
 			global.gravdir = "down";
 		}
-		if (spdswitchbelow and spd > 0.4) {
-			spd -= 0.2;
+		if (spdswitchbelow and global.spd > 0.4) {
+			global.spd -= 0.2;
 		}
 		if (jumpswitchbelow and global.jump > 1.5) {
 			global.jump -= 0.5;
@@ -302,8 +302,8 @@ else if (global.gravdir == "up") {
 			if (gswitchabove) {
 				global.gravdir = "down";
 			}
-			if (spdswitchabove and spd < 3) {
-				spd += 0.2;
+			if (spdswitchabove and global.spd < 3) {
+				global.spd += 0.2;
 			}
 			if (jumpswitchabove and global.jump < 5.5) {
 				global.jump += 0.5;

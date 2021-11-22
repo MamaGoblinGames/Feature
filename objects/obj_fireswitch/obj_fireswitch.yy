@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fireswitch",
-    "path": "sprites/spr_fireswitch/spr_fireswitch.yy",
+    "name": "spr_blockswitch",
+    "path": "sprites/spr_blockswitch/spr_blockswitch.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,7 +20,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
