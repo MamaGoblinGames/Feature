@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_redblockfull",
-    "path": "sprites/spr_redblockfull/spr_redblockfull.yy",
+    "name": "spr_redblock_cage",
+    "path": "sprites/spr_redblock_cage/spr_redblock_cage.yy",
   },
   "solid": false,
   "visible": true,

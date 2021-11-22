@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_blueblockfull",
-    "path": "sprites/spr_blueblockfull/spr_blueblockfull.yy",
+    "name": "spr_blueblock_cage",
+    "path": "sprites/spr_blueblock_cage/spr_blueblock_cage.yy",
   },
   "solid": false,
   "visible": true,
