@@ -89,8 +89,8 @@ inflag = place_meeting(x, y, obj_flag);
 //Check for buttons pressed
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
-up = keyboard_check_pressed(vk_up);
-down = keyboard_check_pressed(vk_down);
+up = keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space);
+down = keyboard_check_pressed(vk_down) or keyboard_check_pressed(vk_space);
 
 //Check if dead
 if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height or keyboard_check_pressed(ord("R"))) {
