@@ -105,7 +105,8 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Sprites/spr_block_cage.yy","order":31,"resourceVersion":"1.0","name":"spr_block_cage","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/hires/spr_block_cage.yy","order":0,"resourceVersion":"1.0","name":"spr_block_cage","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/hires.yy","order":32,"resourceVersion":"1.0","name":"hires","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
