@@ -15,11 +15,15 @@ if (glitching > -1) {
 	}
 	draw_set_color(c_lime);
 	draw_set_font(VT323);
-	draw_set_alpha(0.9);
+	draw_set_alpha(1-image_alpha);
 
-	draw_text_transformed(x, y, text, 0.15, 0.12, image_angle);
+	draw_text_transformed(x, y, text, 0.6, 0.5, image_angle);
 
 	draw_set_alpha(1);
 }
 
-draw_self();
+if (sprite_index == noone) {
+	draw_sprite(emptysprite,0,x,y);
+} else {
+	draw_self();
+}

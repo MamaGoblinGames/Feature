@@ -20,44 +20,6 @@ blockright = place_meeting(x + 1, y, obj_block);
 blockleft = place_meeting(x - 1, y, obj_block);
 inblock = place_meeting(x, y, obj_block);
 
-//Check for red blocks
-if (global.block_red = true) {
-	if (blockbelow = false) {
-		blockbelow = place_meeting(x, y + 1, obj_redblock);
-	}
-	if (blockabove = false) {
-		blockabove = place_meeting(x, y - 1, obj_redblock);
-	}
-	if (blockright = false) {
-		blockright = place_meeting(x + 1, y, obj_redblock);
-	}
-	if (blockleft = false) {
-		blockleft = place_meeting(x - 1, y, obj_redblock);
-	}
-	if (inblock = false) {
-		inblock = place_meeting(x, y, obj_redblock);
-	}
-}
-
-//Check for blue blocks
-else {
-	if (blockbelow = false) {
-		blockbelow = place_meeting(x, y + 1, obj_blueblock);
-	}
-	if (blockabove = false) {
-		blockabove = place_meeting(x, y - 1, obj_blueblock);
-	}
-	if (blockright = false) {
-		blockright = place_meeting(x + 1, y, obj_blueblock);
-	}
-	if (blockleft = false) {
-		blockleft = place_meeting(x - 1, y, obj_blueblock);
-	}
-	if (inblock = false) {
-		inblock = place_meeting(x, y, obj_blueblock);
-	}
-}
-
 //Check for gswitches
 gswitchbelow = place_meeting(x, y + 1, obj_gswitch);
 gswitchabove = place_meeting(x, y - 1, obj_gswitch);
@@ -120,27 +82,27 @@ else if (inflag) {
 if (global.gravdir == "down") {
 	
 	//Fall
-	vspeed += grav;
+	vspeed += grav*global.movementMultplier;
 	
 	//Move left or right
 	hspeed = 0;
 	if (right and !blockright) {
-		hspeed += global.spd;
+		hspeed += global.spd*global.movementMultplier;
 		dir = "right";
 	}
 	if (left and !blockleft) {
-		hspeed -= global.spd;
+		hspeed -= global.spd*global.movementMultplier;
 		dir = "left";
 	}
 	
 	//Jump
 	if (up and blockbelow) {
-		vspeed -= global.jump;
+		vspeed -= global.jump*global.movementMultplier;
 	}
 	
 	//Slam
 	else if (down and !blockbelow and !slamming) {
-		vspeed += global.jump;
+		vspeed += global.jump*global.movementMultplier;
 		slamming = true;
 	}
 	
@@ -227,27 +189,27 @@ if (global.gravdir == "down") {
 else if (global.gravdir == "up") {
 	
 	//Fall
-	vspeed -= grav;
+	vspeed -= grav*global.movementMultplier;
 	
 	//Move left or right
 	hspeed = 0;
 	if (right and !blockright) {
-		hspeed += global.spd;
+		hspeed += global.spd*global.movementMultplier;
 		dir = "right";
 	}
 	if (left and !blockleft) {
-		hspeed -= global.spd;
+		hspeed -= global.spd*global.movementMultplier;
 		dir = "left";
 	}
 	
 	//Jump
 	if (up and blockabove) {
-		vspeed += global.jump;
+		vspeed += global.jump*global.movementMultplier;
 	}
 	
 	//Slam
 	else if (down and !blockabove and !slamming) {
-		vspeed -= global.jump;
+		vspeed -= global.jump*global.movementMultplier;
 		slamming = true;
 	}
 	
@@ -312,7 +274,7 @@ else if (global.gravdir == "up") {
 				global.block_red = !global.block_red;
 			}
 			if (fireswitchabove) {
-				alarm[0] = 2 * room_speed;
+				alarm[0] = 3 * room_speed;
 				global.fire_on = false;
 			}
 		}

@@ -2,6 +2,7 @@ global.spd = 1;
 grav = 0.1;
 global.gravdir = "down";
 global.jump = 3;
+global.movementMultplier = 2.4;
 slamming = false;
 dir = "right";
 right = false;
