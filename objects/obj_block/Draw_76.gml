@@ -1,7 +1,7 @@
 /// @description draw edges
 
 if (!pickedEdges) {
-	pickedEdges = false;
+	pickedEdges = true;
 	blockbelow = place_meeting(x, y + 1, obj_block);
 	blockabove = place_meeting(x, y - 1, obj_block);
 	blockright = place_meeting(x + 1, y, obj_block);
