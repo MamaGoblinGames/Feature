@@ -17,7 +17,7 @@ if (glitching > -1) {
 	draw_set_font(VT323);
 	draw_set_alpha(1-image_alpha);
 
-	draw_text_transformed(x, y, text, 0.15, 0.12, image_angle);
+	draw_text_transformed(x, y, text, 0.6, 0.5, image_angle);
 
 	draw_set_alpha(1);
 }
