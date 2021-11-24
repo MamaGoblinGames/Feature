@@ -20,44 +20,6 @@ blockright = place_meeting(x + 1, y, obj_block);
 blockleft = place_meeting(x - 1, y, obj_block);
 inblock = place_meeting(x, y, obj_block);
 
-//Check for red blocks
-if (global.block_red = true) {
-	if (blockbelow = false) {
-		blockbelow = place_meeting(x, y + 1, obj_redblock);
-	}
-	if (blockabove = false) {
-		blockabove = place_meeting(x, y - 1, obj_redblock);
-	}
-	if (blockright = false) {
-		blockright = place_meeting(x + 1, y, obj_redblock);
-	}
-	if (blockleft = false) {
-		blockleft = place_meeting(x - 1, y, obj_redblock);
-	}
-	if (inblock = false) {
-		inblock = place_meeting(x, y, obj_redblock);
-	}
-}
-
-//Check for blue blocks
-else {
-	if (blockbelow = false) {
-		blockbelow = place_meeting(x, y + 1, obj_blueblock);
-	}
-	if (blockabove = false) {
-		blockabove = place_meeting(x, y - 1, obj_blueblock);
-	}
-	if (blockright = false) {
-		blockright = place_meeting(x + 1, y, obj_blueblock);
-	}
-	if (blockleft = false) {
-		blockleft = place_meeting(x - 1, y, obj_blueblock);
-	}
-	if (inblock = false) {
-		inblock = place_meeting(x, y, obj_blueblock);
-	}
-}
-
 //Check for gswitches
 gswitchbelow = place_meeting(x, y + 1, obj_gswitch);
 gswitchabove = place_meeting(x, y - 1, obj_gswitch);

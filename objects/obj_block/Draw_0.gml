@@ -22,4 +22,8 @@ if (glitching > -1) {
 	draw_set_alpha(1);
 }
 
-draw_self();
+if (sprite_index == noone) {
+	draw_sprite(emptysprite,0,x,y);
+} else {
+	draw_self();
+}

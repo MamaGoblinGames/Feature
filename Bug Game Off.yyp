@@ -39,7 +39,6 @@
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},"order":1,},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},"order":4,},
     {"id":{"name":"spr_redblockfull","path":"sprites/spr_redblockfull/spr_redblockfull.yy",},"order":16,},
-    {"id":{"name":"spr_blueblock_cage","path":"sprites/spr_blueblock_cage/spr_blueblock_cage.yy",},"order":28,},
     {"id":{"name":"obj_fire","path":"objects/obj_fire/obj_fire.yy",},"order":14,},
     {"id":{"name":"obj_blueblock","path":"objects/obj_blueblock/obj_blueblock.yy",},"order":10,},
     {"id":{"name":"spr_fallleft","path":"sprites/spr_fallleft/spr_fallleft.yy",},"order":5,},
