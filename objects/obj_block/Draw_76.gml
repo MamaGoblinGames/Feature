@@ -39,7 +39,5 @@ if (!pickedEdges) {
 		sprite_index = spr_block_cage_tr;
 	} else if (!blockabove && blockbelow && !blockleft && !blockright) {
 		sprite_index = spr_block_cage_trl;
-	} else {
-		sprite_index = spr_block;
 	}
 }
