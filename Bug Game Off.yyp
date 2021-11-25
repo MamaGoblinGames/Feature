@@ -8,7 +8,6 @@
     {"id":{"name":"spr_jumpswitch","path":"sprites/spr_jumpswitch/spr_jumpswitch.yy",},"order":22,},
     {"id":{"name":"obj_jumpswitch","path":"objects/obj_jumpswitch/obj_jumpswitch.yy",},"order":8,},
     {"id":{"name":"spr_block_cage_b","path":"sprites/spr_block_cage_b/spr_block_cage_b.yy",},"order":2,},
-    {"id":{"name":"spr_redblock_icon","path":"sprites/spr_redblock_icon/spr_redblock_icon.yy",},"order":16,},
     {"id":{"name":"spr_block_cage_tb","path":"sprites/spr_block_cage_tb/spr_block_cage_tb.yy",},"order":6,},
     {"id":{"name":"spr_block_cage_brl","path":"sprites/spr_block_cage_brl/spr_block_cage_brl.yy",},"order":14,},
     {"id":{"name":"spr_gswitch","path":"sprites/spr_gswitch/spr_gswitch.yy",},"order":20,},
