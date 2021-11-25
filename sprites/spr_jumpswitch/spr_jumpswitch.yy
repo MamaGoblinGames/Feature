@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "switches",
+    "path": "folders/Sprites/switches.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_jumpswitch",
