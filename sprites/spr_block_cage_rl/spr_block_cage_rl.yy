@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "block",
-    "path": "folders/Sprites/block.yy",
+    "name": "spr_block_cage",
+    "path": "folders/Sprites/spr_block_cage.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_block_cage_rl",

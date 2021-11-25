@@ -150,6 +150,9 @@ if (global.gravdir == "down") {
 	
 	//Stop falling
 	else if (blockbelow){
+		if (vspeed > 1 && !slamming) {
+			audio_play_sound(snd_land, 9, false);
+		}
 		if (!up) {
 			vspeed = 0;
 		}
@@ -170,6 +173,7 @@ if (global.gravdir == "down") {
 				alarm[0] = 2 * room_speed;
 				global.fire_on = false;
 			}
+			audio_play_sound(snd_slam, 10, false);
 		}
 		while (inblock) {
 			y -= 1;
@@ -257,6 +261,9 @@ else if (global.gravdir == "up") {
 	
 	//Stop falling
 	else if (blockabove){
+		if (vspeed < -1 && !slamming) {
+			audio_play_sound(snd_land, 9, false);
+		}
 		if (!up) {
 			vspeed = 0;
 		}
@@ -277,6 +284,7 @@ else if (global.gravdir == "up") {
 				alarm[0] = 3 * room_speed;
 				global.fire_on = false;
 			}
+			audio_play_sound(snd_slam, 10, false);
 		}
 		while (inblock) {
 			y += 1;
