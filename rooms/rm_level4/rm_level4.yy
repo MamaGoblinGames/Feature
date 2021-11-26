@@ -3,7 +3,7 @@
   "volume": 1.0,
   "parentRoom": null,
   "views": [
-    {"inherit":false,"visible":true,"xview":0,"yview":0,"wview":480,"hview":480,"xport":0,"yport":0,"wport":900,"hport":900,"hborder":100,"vborder":100,"hspeed":-1,"vspeed":-1,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"inherit":false,"visible":true,"xview":0,"yview":0,"wview":480,"hview":480,"xport":0,"yport":0,"wport":900,"hport":900,"hborder":240,"vborder":240,"hspeed":-1,"vspeed":-1,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
@@ -13,11 +13,7 @@
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
   ],
   "layers": [
-    {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_62BE13E9_1_4","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_fireswitch","path":"objects/obj_fireswitch/obj_fireswitch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":210.0,"y":280.0,"resourceVersion":"1.0","name":"inst_2819CFC","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_fireswitch","path":"objects/obj_fireswitch/obj_fireswitch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":260.0,"y":260.0,"resourceVersion":"1.0","name":"inst_B8F32F3","tags":[],"resourceType":"GMRInstance",},
-      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":10,"gridY":10,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
+    {"instances":[],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":10,"gridY":10,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_51D327B6_4","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":744.0,"resourceVersion":"1.0","name":"inst_5FD2999C","tags":[],"resourceType":"GMRInstance",},
@@ -210,12 +206,9 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_62BE13E9_1_4","path":"rooms/rm_level4/rm_level4.yy",},
     {"name":"inst_51D327B6_4","path":"rooms/rm_level4/rm_level4.yy",},
     {"name":"inst_5FD2999C","path":"rooms/rm_level4/rm_level4.yy",},
     {"name":"inst_5537F5C3","path":"rooms/rm_level4/rm_level4.yy",},
-    {"name":"inst_2819CFC","path":"rooms/rm_level4/rm_level4.yy",},
-    {"name":"inst_B8F32F3","path":"rooms/rm_level4/rm_level4.yy",},
     {"name":"inst_60C749A4","path":"rooms/rm_level4/rm_level4.yy",},
     {"name":"inst_63BE06F","path":"rooms/rm_level4/rm_level4.yy",},
     {"name":"inst_2D3D9313","path":"rooms/rm_level4/rm_level4.yy",},
@@ -420,8 +413,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "levels",
+    "path": "folders/Rooms/levels.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_level4",

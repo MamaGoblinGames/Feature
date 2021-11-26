@@ -94,7 +94,7 @@
   },
   "parent": {
     "name": "block",
-    "path": "folders/Sprites/block/block.yy",
+    "path": "folders/Sprites/blocks/block.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_block_cage_tbl",

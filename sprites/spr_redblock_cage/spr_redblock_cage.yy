@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "blocks",
+    "path": "folders/Sprites/blocks.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_redblock_cage",

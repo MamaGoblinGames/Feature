@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_flag",
-    "path": "sprites/spr_flag/spr_flag.yy",
+    "name": "spr_folderfront",
+    "path": "sprites/spr_folderfront/spr_folderfront.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "other",
+    "path": "folders/Objects/other.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_flag",
