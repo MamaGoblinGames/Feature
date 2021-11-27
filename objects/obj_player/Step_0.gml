@@ -302,38 +302,29 @@ else if (global.gravdir == "up") {
 	}
 }
 
-//Change sprites
+//Flip image
 if (dir == "right") {
-	if (vspeed == 0) {
-		if (hspeed != 0) {
-			sprite_index = spr_walkright;
-		}
-		else {
-			sprite_index = spr_idleright;
-		}
-	}
-	else {
-		sprite_index = spr_fallright;
-	}
+	image_xscale = 1;
 }
 else if (dir == "left") {
-	if (vspeed == 0) {
-		if (hspeed != 0) {
-			sprite_index = spr_walkleft;
-		}
-		else {
-			sprite_index = spr_idleleft;
-		}
-	}
-	else {
-		sprite_index = spr_fallleft;
-	}
+	image_xscale = -1;
 }
-
-//Flip image
 if (global.gravdir == "up") {
 	image_yscale = -1;
 }
 else if (global.gravdir == "down") {
 	image_yscale = 1;
+}
+
+//Change sprites
+if (vspeed == 0) {
+	if (hspeed != 0) {
+		sprite_index = spr_newwalk;
+	}
+	else {
+		sprite_index = spr_newidle;
+	}
+}
+else {
+	sprite_index = spr_newfall;
 }
