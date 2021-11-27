@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_newidle",
-    "path": "sprites/spr_newidle/spr_newidle.yy",
+    "name": "spr_newfall",
+    "path": "sprites/spr_newfall/spr_newfall.yy",
   },
   "solid": false,
   "visible": true,
