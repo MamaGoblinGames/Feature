@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "switches",
+    "path": "folders/Objects/switches.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_blockswitch",

@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "empty block",
-    "path": "folders/Sprites/block/empty block.yy",
+    "path": "folders/Sprites/blocks/empty block.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_redblockempty",
