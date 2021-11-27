@@ -59,6 +59,7 @@
     {"id":{"name":"spr_block_cage_r","path":"sprites/spr_block_cage_r/spr_block_cage_r.yy",},"order":7,},
     {"id":{"name":"CutiveMono","path":"fonts/CutiveMono/CutiveMono.yy",},"order":1,},
     {"id":{"name":"spr_oldfall","path":"sprites/spr_oldfall/spr_oldfall.yy",},"order":1,},
+    {"id":{"name":"rm_level0","path":"rooms/rm_level0/rm_level0.yy",},"order":8,},
     {"id":{"name":"spr_block_cage_bl","path":"sprites/spr_block_cage_bl/spr_block_cage_bl.yy",},"order":2,},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},"order":1,},
     {"id":{"name":"spr_fireweak","path":"sprites/spr_fireweak/spr_fireweak.yy",},"order":3,},
@@ -81,6 +82,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_level0","path":"rooms/rm_level0/rm_level0.yy",},},
     {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"roomId":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"roomId":{"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},},
