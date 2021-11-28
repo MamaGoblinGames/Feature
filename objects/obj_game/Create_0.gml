@@ -8,3 +8,7 @@ global.glitchAlphaMin = 0.1;
 global.glitchAlphaMax = 0.9;
 global.glitchDurationMin = 0;
 global.glitchDurationMax = 3;
+
+if (room == rm_level0){
+	audio_play_sound(msc_song, 2, true);
+}
