@@ -10,4 +10,4 @@ image_index = 0;
 
 camera_set_view_target(view_camera[0], folder);
 
-alarm_set(0, spawnDelay*room_speed);
+alarm_set(0, spawnDelay);
