@@ -2,4 +2,5 @@
 
 image_speed = 0;
 image_index = image_number - 1;
-showSubtitle = true;
+
+alarm_set(1, 0.6*room_speed);
