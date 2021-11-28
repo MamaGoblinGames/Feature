@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "other",
-    "path": "folders/Sprites/other.yy",
+    "name": "unused",
+    "path": "folders/Sprites/unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_spawn",

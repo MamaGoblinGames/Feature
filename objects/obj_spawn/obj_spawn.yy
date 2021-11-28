@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_spawn",
-    "path": "sprites/spr_spawn/spr_spawn.yy",
+    "name": "spr_folderfront",
+    "path": "sprites/spr_folderfront/spr_folderfront.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "other",
-    "path": "folders/Objects/other.yy",
+    "name": "folder",
+    "path": "folders/Objects/folder.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_spawn",
