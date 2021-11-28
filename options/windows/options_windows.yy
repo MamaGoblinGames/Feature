@@ -1,11 +1,11 @@
 {
-  "option_windows_display_name": "Bug-Game-Off",
+  "option_windows_display_name": "Feature",
   "option_windows_executable_name": "${project_name}.exe",
   "option_windows_version": "1.0.0.0",
   "option_windows_company_info": "Mama Goblin Games",
   "option_windows_product_info": "",
   "option_windows_copyright_info": "",
-  "option_windows_description_info": "A game about bugs",
+  "option_windows_description_info": "a Mama Goblin Games puzzle platformer about bugs",
   "option_windows_display_cursor": true,
   "option_windows_icon": "${base_options_dir}/windows/icons/icon.ico",
   "option_windows_save_location": 0,
