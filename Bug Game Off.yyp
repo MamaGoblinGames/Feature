@@ -64,6 +64,7 @@
     {"id":{"name":"spr_oldfall","path":"sprites/spr_oldfall/spr_oldfall.yy",},"order":1,},
     {"id":{"name":"rm_level0","path":"rooms/rm_level0/rm_level0.yy",},"order":5,},
     {"id":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"order":5,},
+    {"id":{"name":"msc_song","path":"sounds/msc_song/msc_song.yy",},"order":2,},
     {"id":{"name":"spr_block_cage_bl","path":"sprites/spr_block_cage_bl/spr_block_cage_bl.yy",},"order":2,},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},"order":1,},
     {"id":{"name":"spr_fireweak","path":"sprites/spr_fireweak/spr_fireweak.yy",},"order":3,},
