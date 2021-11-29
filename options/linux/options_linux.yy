@@ -1,6 +1,6 @@
 {
   "option_linux_display_name": "Feature",
-  "option_linux_version": "1.0.0.0",
+  "option_linux_version": "0.1.0",
   "option_linux_maintainer_email": "",
   "option_linux_homepage": "https://mamagoblin.games",
   "option_linux_short_desc": "a Mama Goblin Games puzzle platformer about bugs",
