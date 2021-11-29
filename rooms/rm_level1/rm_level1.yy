@@ -336,8 +336,11 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":336.0,"y":696.0,"resourceVersion":"1.0","name":"inst_74C8825C","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_gswitch","path":"objects/obj_gswitch/obj_gswitch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":504.0,"y":960.0,"resourceVersion":"1.0","name":"inst_59319395","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
-            {"propertyId":{"name":"text","path":"objects/obj_tutorial/obj_tutorial.yy",},"objectId":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"value":"hit down arrow or space while mid air to edit broken code","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"text","path":"objects/obj_tutorial/obj_tutorial.yy",},"objectId":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"value":"Looks like the minus sign is exposed in the code here. Jump then hit down or space to slam on the gap and change the code to create a bug... feature.","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":432.0,"y":864.0,"resourceVersion":"1.0","name":"inst_645C31B4","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"text","path":"objects/obj_tutorial/obj_tutorial.yy",},"objectId":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"value":"You changed the - to a +. That G must be the gravity variable. What a great feature!","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":432.0,"y":504.0,"resourceVersion":"1.0","name":"inst_12FE114","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":24,"gridY":24,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Level","tags":[],"resourceType":"GMRInstanceLayer",},
     {"spriteId":null,"colour":4278190080,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
@@ -664,6 +667,7 @@
     {"name":"inst_645C31B4","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_21EA5701","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_754EF56A","path":"rooms/rm_level1/rm_level1.yy",},
+    {"name":"inst_12FE114","path":"rooms/rm_level1/rm_level1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
