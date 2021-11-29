@@ -2,6 +2,8 @@ global.block_red = true;
 global.fire_on = true;
 global.switch_alpha = 0.75;
 
+global.showTutorials = false;
+
 global.glitchDelayMin = 5;
 global.glitchDelayMax = 100;
 global.glitchAlphaMin = 0.1;
