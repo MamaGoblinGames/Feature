@@ -1,18 +1,3 @@
-//Switch to test room
-if (keyboard_check_pressed(ord("T"))) {
-	room = rm_test;
-}
-
-//Skip level
-if (keyboard_check_pressed(ord("S"))) {
-	room_goto_next();
-}
-
-//Go back through levels
-if (keyboard_check_pressed(ord("B"))) {
-	room_goto_previous();
-}
-
 //Check for blocks
 blockbelow = place_meeting(x, y + 1, obj_block);
 blockabove = place_meeting(x, y - 1, obj_block);
@@ -109,6 +94,7 @@ if (global.gravdir == "down") {
 	//Don't get stuck in the bottom of blocks
 	else if (blockabove and vspeed < 0) {
 		vspeed = 0;
+		audio_play_sound(snd_land, 9, false);
 		if (gswitchabove) {
 			global.gravdir = "up";
 		}
@@ -220,6 +206,7 @@ else if (global.gravdir == "up") {
 	//Don't get stuck in the bottom of blocks
 	else if (blockbelow and vspeed > 0) {
 		vspeed = 0;
+		audio_play_sound(snd_land, 9, false);
 		if (gswitchbelow) {
 			global.gravdir = "down";
 		}
