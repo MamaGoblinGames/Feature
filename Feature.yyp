@@ -28,6 +28,7 @@
     {"id":{"name":"spr_redblockempty","path":"sprites/spr_redblockempty/spr_redblockempty.yy",},"order":2,},
     {"id":{"name":"rm_level4","path":"rooms/rm_level4/rm_level4.yy",},"order":3,},
     {"id":{"name":"spr_newfall","path":"sprites/spr_newfall/spr_newfall.yy",},"order":6,},
+    {"id":{"name":"obj_switch_parent","path":"objects/obj_switch_parent/obj_switch_parent.yy",},"order":4,},
     {"id":{"name":"obj_spritetest","path":"objects/obj_spritetest/obj_spritetest.yy",},"order":1,},
     {"id":{"name":"obj_flag","path":"objects/obj_flag/obj_flag.yy",},"order":0,},
     {"id":{"name":"spr_block_cage_none","path":"sprites/spr_block_cage_none/spr_block_cage_none.yy",},"order":6,},
