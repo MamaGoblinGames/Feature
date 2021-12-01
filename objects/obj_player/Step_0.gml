@@ -59,6 +59,7 @@ if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height or keyboar
 	hspeed = 0;
 	global.block_red = true;
 	global.fire_on = true;
+	audio_play_sound(snd_death, 2, false);
 }
 
 //Check if win

@@ -19,6 +19,7 @@
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"order":0,},
     {"id":{"name":"spr_fire","path":"sprites/spr_fire/spr_fire.yy",},"order":0,},
     {"id":{"name":"fnt_tutorial","path":"fonts/fnt_tutorial/fnt_tutorial.yy",},"order":2,},
+    {"id":{"name":"snd_death","path":"sounds/snd_death/snd_death.yy",},"order":5,},
     {"id":{"name":"spr_block_cage_rl","path":"sprites/spr_block_cage_rl/spr_block_cage_rl.yy",},"order":8,},
     {"id":{"name":"spr_block_cage_br","path":"sprites/spr_block_cage_br/spr_block_cage_br.yy",},"order":3,},
     {"id":{"name":"spr_redblock_cage","path":"sprites/spr_redblock_cage/spr_redblock_cage.yy",},"order":2,},
