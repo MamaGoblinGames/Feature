@@ -7,5 +7,5 @@ if (global.showTutorials) {
 
 	textScale = 0.5;
 
-	draw_text_ext_transformed(x, y, text, -1, 110/textScale, textScale, textScale, image_angle);
+	draw_text_ext_transformed(x, y, text, -1, max_width/textScale, textScale, textScale, image_angle);
 }
