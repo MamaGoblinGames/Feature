@@ -39,6 +39,8 @@ left = keyboard_check(vk_left);
 up = keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space);
 down = keyboard_check_pressed(vk_down) or keyboard_check_pressed(vk_space);
 
+var switchhit = false;
+
 //Check if dead
 if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height or keyboard_check_pressed(ord("R"))) {
 	global.spd = 1;
@@ -95,22 +97,29 @@ if (global.gravdir == "down") {
 	else if (blockabove and vspeed < 0) {
 		vspeed = 0;
 		audio_play_sound(snd_land, 9, false);
+		
 		if (gswitchabove) {
 			global.gravdir = "up";
+			switchhit = true;
 		}
 		if (spdswitchabove and global.spd < 3) {
 			global.spd += 0.2;
+			switchhit = true;
 		}
 		if (jumpswitchabove and global.jump < 5.5) {
 			global.jump += 0.5;
+			switchhit = true;
 		}
 		if (blockswitchabove) {
 			global.block_red = !global.block_red;
+			switchhit = true;
 		}
 		if (fireswitchabove) {
 			alarm[0] = 3 * room_speed;
 			global.fire_on = false;
+			switchhit = true;
 		}
+
 		while (inblock) {
 			y += 1;
 			inblock = place_meeting(x, y, obj_block);
@@ -145,19 +154,24 @@ if (global.gravdir == "down") {
 		if (slamming == true) {
 			if (gswitchbelow) {
 				global.gravdir = "up";
+				switchhit = true;
 			}
 			if (spdswitchbelow and global.spd > 0.4) {
 				global.spd -= 0.2;
+				switchhit = true;
 			}
 			if (jumpswitchbelow and global.jump > 1.5) {
 				global.jump -= 0.5;
+				switchhit = true;
 			}
 			if (blockswitchbelow) {
 				global.block_red = !global.block_red;
+				switchhit = true;
 			}
 			if (fireswitchbelow) {
 				alarm[0] = 2 * room_speed;
 				global.fire_on = false;
+				switchhit = true;
 			}
 			audio_play_sound(snd_slam, 10, false);
 		}
@@ -209,19 +223,24 @@ else if (global.gravdir == "up") {
 		audio_play_sound(snd_land, 9, false);
 		if (gswitchbelow) {
 			global.gravdir = "down";
+			switchhit = true;
 		}
 		if (spdswitchbelow and global.spd > 0.4) {
 			global.spd -= 0.2;
+			switchhit = true;
 		}
 		if (jumpswitchbelow and global.jump > 1.5) {
 			global.jump -= 0.5;
+			switchhit = true;
 		}
 		if (blockswitchbelow) {
 			global.block_red = !global.block_red;
+			switchhit = true;
 		}
 		if (fireswitchbelow) {
 			alarm[0] = 2 * room_speed;
 			global.fire_on = false;
+			switchhit = true;
 		}
 		while (inblock) {
 			y -= 1;
@@ -257,19 +276,24 @@ else if (global.gravdir == "up") {
 		if (slamming == true) {
 			if (gswitchabove) {
 				global.gravdir = "down";
+				switchhit = true;
 			}
 			if (spdswitchabove and global.spd < 3) {
 				global.spd += 0.2;
+				switchhit = true;
 			}
 			if (jumpswitchabove and global.jump < 5.5) {
 				global.jump += 0.5;
+				switchhit = true;
 			}
 			if (blockswitchabove) {
 				global.block_red = !global.block_red;
+				switchhit = true;
 			}
 			if (fireswitchabove) {
 				alarm[0] = 3 * room_speed;
 				global.fire_on = false;
+				switchhit = true;
 			}
 			audio_play_sound(snd_slam, 10, false);
 		}
@@ -314,4 +338,9 @@ if (vspeed == 0) {
 }
 else {
 	sprite_index = spr_newfall;
+}
+
+// play sounds
+if (switchhit) {
+	audio_play_sound(snd_switch_glitch, 7, false);
 }
