@@ -41,6 +41,7 @@
     {"id":{"name":"rm_level6","path":"rooms/rm_level6/rm_level6.yy",},"order":5,},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},"order":10,},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"order":1,},
+    {"id":{"name":"obj_browser_scaling","path":"objects/obj_browser_scaling/obj_browser_scaling.yy",},"order":6,},
     {"id":{"name":"spr_block_cage_tbl","path":"sprites/spr_block_cage_tbl/spr_block_cage_tbl.yy",},"order":11,},
     {"id":{"name":"spr_block_cage_tl","path":"sprites/spr_block_cage_tl/spr_block_cage_tl.yy",},"order":13,},
     {"id":{"name":"spr_firewallweak","path":"sprites/spr_firewallweak/spr_firewallweak.yy",},"order":2,},
