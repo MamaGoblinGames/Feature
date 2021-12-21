@@ -1,7 +1,7 @@
 /// @description init
 
 innerRoomSize = 10;
-innerRoomIndex = 1
+innerRoomIndex = 1;
 focalPointX = 0;
 focalPointY = 0;
 innerRoomTriggered = false;
