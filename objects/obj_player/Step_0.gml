@@ -43,23 +43,8 @@ var switchhit = false;
 
 //Check if dead
 if (infirewall or x < 0 or y < 0 or x > room_width or y > room_height or keyboard_check_pressed(ord("R"))) {
-	global.spd = 1;
-	grav = 0.1;
-	global.gravdir = "down";
-	global.jump = 3;
-	slamming = false;
-	dir = "right";
-	right = false;
-	left = false;
-	up = false;
-	down = false;
-	x = global.spawnx;
-	y = global.spawny;
-	vspeed = 0;
-	hspeed = 0;
-	global.block_red = true;
-	global.fire_on = true;
 	audio_play_sound(snd_death, 2, false);
+	room_restart();
 }
 
 //Check if win
